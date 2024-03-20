@@ -1,0 +1,3 @@
+abs(real(X)) < tol: This part calculates the absolute values of the real parts of all elements in X (real(X)), and then checks if these absolute values are less than the tolerance tol. This condition creates a logical array of the same size as X, where each element is true if the corresponding element in X has a real part with an absolute value less than tol, and false otherwise.
+
+abs(imag(X)) < tol: Similarly, this part calculates the absolute values of the imaginary parts of all elements in X (imag(X)), and checks if these absolute values are less than tol. This creates another logical array with the same size as X, but now the elements are true if the corresponding element in X has an imaginary part with an absolute value less than tol, and false otherwise.
