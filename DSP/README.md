@@ -6,6 +6,7 @@
 
 3. I encountered an error in the phase plot due to MATLAB's approximation for very small floating-point values. To address this problem, I checked the workspace for the exact calculated values and found a solution. Adding the following code after the for loop sets the small values to exact zeroes and fixes the negative zero values for both real and imaginary parts:
 
+```
 % Remove negative values close to zero using tolerance
 
 % Define the tolerance
@@ -17,3 +18,4 @@ tol = 1e-15; % I used this value through trial and error because using 'eps' did
 X(abs(imag(X)) < tol) = real(X(abs(imag(X)) < tol)) + 0i;
 
 X(abs(real(X)) < tol) = 0 + imag(X(abs(real(X)) < tol));
+```
